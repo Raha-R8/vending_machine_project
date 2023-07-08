@@ -1,23 +1,26 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    04:09:09 06/30/2023 
-// Design Name: 
-// Module Name:    seven_segment 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
+// Company:
+// Engineer:
 //
-// Dependencies: 
+// Create Date:    04:09:09 06/30/2023
+// Design Name:
+// Module Name:    seven_segment
+// Project Name:
+// Target Devices:
+// Tool versions:
+// Description:
 //
-// Revision: 
+// Dependencies:
+//
+// Revision:
 // Revision 0.01 - File Created
-// Additional Comments: 
+// Additional Comments:
 //
 //////////////////////////////////////////////////////////////////////////////////
+/*This module will display the numbers using 2 seven segments in decimal but
+the seven segment in the head module is a just one seven segment that displays
+numbers in hexadecimal*/
 module seven_segment (
     input clk,
     input [3:0] number,
@@ -58,5 +61,5 @@ always@(negedge clk)begin
 	 $display("%b",seg1);
 	 $display("%b",seg2);
 end
-    
+
 endmodule

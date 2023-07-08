@@ -1,25 +1,25 @@
 `timescale 1ns / 1ps
 
 ////////////////////////////////////////////////////////////////////////////////
-// Company: 
+// Company:
 // Engineer:
 //
 // Create Date:   23:41:25 06/29/2023
 // Design Name:   head_module
 // Module Name:   C:/Windows/System32/vending_machine/head_module_tb.v
 // Project Name:  vending_machine
-// Target Device:  
-// Tool versions:  
-// Description: 
+// Target Device:
+// Tool versions:
+// Description:
 //
 // Verilog Test Fixture created by ISE for module: head_module
 //
 // Dependencies:
-// 
+//
 // Revision:
 // Revision 0.01 - File Created
 // Additional Comments:
-// 
+//
 ////////////////////////////////////////////////////////////////////////////////
 
 module head_module_tb;
@@ -36,20 +36,18 @@ module head_module_tb;
 	// Outputs
 	wire [6:0]seg1;
 	wire [6:0]seg2;
-	wire [6:0]seg3;
 
 	// Instantiate the Unit Under Test (UUT)
 	head_module uut (
-    .clk(clk), 
-    .costumer_mode(costumer_mode), 
-    .owner_money_mode(owner_money_mode), 
+    .clk(clk),
+    .costumer_mode(costumer_mode),
+    .owner_money_mode(owner_money_mode),
     .owner_supply_mode(owner_supply_mode),
-    .product(product), 
+    .product(product),
     .costumer_money(costumer_money),
-    .quantitiy(quantitiy), 
-    .seg1(seg1), 
-    .seg2(seg2), 
-    .seg3(seg3)
+    .quantitiy(quantitiy),
+    .seg1(seg1),
+    .seg2(seg2)
     );
 	always #25 clk = ~clk;
 	initial begin
@@ -73,8 +71,7 @@ module head_module_tb;
 		quantitiy = 4'b0010;
 		#50
 		owner_supply_mode =0;
-		
-	end
-  
-endmodule
 
+	end
+
+endmodule
